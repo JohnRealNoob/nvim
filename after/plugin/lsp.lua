@@ -38,7 +38,18 @@ config = function()
 	local servers = {
 		clangd = {},
 		sqlls = {},
-		pyright = {},
+		pyright = {
+            settings = {
+                pyright = {
+                    inlayHints = {
+                        variableTypes = false,
+                        parameterTypes = false,
+                        functionReturnTypes = false,
+                    }
+                }
+            }
+
+        },
         asm_lsp = {}, 
 		rust_analyzer = {
 			settings = {
