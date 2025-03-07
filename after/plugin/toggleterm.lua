@@ -1,7 +1,7 @@
 require("toggleterm").setup({
     size = function(term)
         if term.direction == "horizontal" then
-            return 15
+            return 20 
         elseif term.direction == "vertical" then
             return vim.o.columns * 0.3 -- More reasonable width
         else
@@ -14,7 +14,7 @@ require("toggleterm").setup({
     end,
     open_mapping = [[<c-\>]],
     autochdir = true,
-    direction = 'vertical',
+    direction = 'horizontal',
     shell = vim.o.shell,
     start_in_insert = true, -- Explicitly set for clarity
 })
